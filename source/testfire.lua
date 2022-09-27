@@ -13,3 +13,12 @@ end)
 Section:NewSlider("Walkspeed", "Max without flagging is 37", 37, 16, function(s) -- 37 (MaxValue) | 16 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+
+Section:NewButton("Infinite Jump (lags back when u spam)", "Jumps inf times", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
