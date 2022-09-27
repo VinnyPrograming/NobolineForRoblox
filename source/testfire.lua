@@ -10,3 +10,6 @@ Section:NewButton("KillAura", "Attacks players that come to you.", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/VJUMhJfW'))()
 end)
 
+Section:NewSlider("Walkspeed", "Max without flagging is 37", 37, 16, function(s) -- 37 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
