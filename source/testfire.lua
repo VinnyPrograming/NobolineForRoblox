@@ -312,3 +312,24 @@ game:GetService("RunService").RenderStepped:connect(function()
     end
 end)
 end)
+
+Section:NewButton("TP Bypass (CTRL + Click)", "epic", function()
+   local Plr = game:GetService("Players").LocalPlayer
+local Mouse = Plr:GetMouse()
+ 
+Mouse.Button1Down:connect(
+    function()
+        if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then
+            return
+        end
+        if not Mouse.Target then
+            return
+        end
+        local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+
+{CFrame = CFrame.new(Mouse.Hit.p)}):Play()
+
+    end
+)
+end)
