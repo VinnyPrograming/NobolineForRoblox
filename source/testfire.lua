@@ -346,8 +346,8 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 )
 end)
 
-Section:NewButton("kill all", "tp bypass", function()
-		--// Setting \\--
+Section:NewButton("KillAura", "Attacks players that come to you.", function()
+    --// Setting \\--
 local range = 15
  
 --// Variable \\--
@@ -382,4 +382,5 @@ game.RunService.RenderStepped:Connect(function()
             until v.Character.Humanoid.Health == 0 or not v.Character:FindFirstChild("Humanoid")
         end
     end
+end)
 end)
