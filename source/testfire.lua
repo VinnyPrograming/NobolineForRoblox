@@ -314,7 +314,7 @@ end)
 end)
 
 Section:NewButton("TP Bypass (CTRL + Click)", "epic", function()
-  local Plr = game:GetService("Players").LocalPlayer
+ local Plr = game:GetService("Players").LocalPlayer
 local Mouse = Plr:GetMouse()
  
 Mouse.Button1Down:connect(
@@ -325,9 +325,9 @@ Mouse.Button1Down:connect(
         if not Mouse.Target then
             return
         end
-        local maxDistance = 70;
+        local maxDistance = 145;
         local vectorDistanceBetweenHRPnTarget = (Mouse.Hit.p - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-        
+
         if vectorDistanceBetweenHRPnTarget >= maxDistance then
             print("Safe TP started!")
              local TweenService = game:GetService("TweenService")
@@ -336,7 +336,7 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 {CFrame = CFrame.new(Mouse.Hit.p)}):Play()
 return
         end
-        
+
         local TweenService = game:GetService("TweenService")
 local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
 
