@@ -346,7 +346,7 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 )
 end)
 
-Section:NewButton("KillAura", "Attacks players that come to you.", function()
+Section:NewButton("kill all", "Attacks players that come to you.", function()
     --// Setting \\--
 local range = 15
  
