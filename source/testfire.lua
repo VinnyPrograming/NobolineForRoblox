@@ -346,7 +346,7 @@ local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPa
 )
 end)
 
-ction:NewButton("kill all", "tp bypass", function()
+Section:NewButton("kill all", "tp bypass", function()
 		--// Setting \\--
 local range = 15
  
